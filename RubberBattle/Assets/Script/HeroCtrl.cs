@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HeroCtrl : MonoBehaviour {
 
+
+
+
     [SerializeField]
     private float Speed=0;
     [SerializeField]
@@ -19,16 +22,31 @@ public class HeroCtrl : MonoBehaviour {
     [SerializeField]
     private KeyCode Attack = KeyCode.Space;
     private Rigidbody2D rb;
+    /// <summary>
+    /// 是否站在地上
+    /// </summary>
+    private bool IsGround=true;
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Ground")) 
+             IsGround = true; 
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Ground"))
+            IsGround = false;
+    }
+
+    // Update is called once per frame
+    void Update () {
 
 
-        if (Input.GetKeyDown(UP))
+        if (Input.GetKeyDown(UP)&&IsGround)
         {
             rb.AddForce(Vector2 .up*Jump, ForceMode2D.Force);
         }
