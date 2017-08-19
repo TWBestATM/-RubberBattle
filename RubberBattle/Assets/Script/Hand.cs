@@ -19,7 +19,6 @@ public class Hand : MonoBehaviour {
         
         if (collision.tag == "body" && collision.gameObject != parent) {
             collision.gameObject.GetComponent<HeroCtrl>().Hurt();
-            print("hit");
         }
     }
 }
