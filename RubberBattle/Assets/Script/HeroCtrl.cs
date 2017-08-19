@@ -6,8 +6,8 @@ using Spine.Unity;
 public class HeroCtrl : MonoBehaviour {
 
 
-
-
+    [SerializeField]
+    private int id;
     [SerializeField]
     private float Speed=0;
     [SerializeField]
@@ -56,7 +56,8 @@ public class HeroCtrl : MonoBehaviour {
     }
     public void Init(int PlayID) 
     {
-        if (PlayID == 1) {
+        id = PlayID;
+        if (PlayID == 0) {
             UP = KeyCode.W;
             Left = KeyCode.A;
             Right = KeyCode.D;
@@ -72,7 +73,6 @@ public class HeroCtrl : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-
 
         if (Input.GetKeyDown(UP)&&IsGround)
         {
@@ -103,7 +103,13 @@ public class HeroCtrl : MonoBehaviour {
     }
 
     public void Hurt() {
-        hpUI.UpdateHPUI(Hp / 10);
+
         Hp--;
+        UIManager.instance.Hurt(id, Hp/10);
+      
+
+        if (Hp == 0) {
+            GameSystem.Instance.GameOver();
+        }
     }
 }
