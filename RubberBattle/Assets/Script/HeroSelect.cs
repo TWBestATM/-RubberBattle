@@ -22,9 +22,9 @@ public class HeroSelect : MonoBehaviour {
     private int NowHeroID=0;
     private List<GameObject> HeroList;
     private int ListCount=0;
-    private enum customPlayID{ Player1, Player2 }
+    private bool IsReady=false;
     [SerializeField]
-    private customPlayID PlayID;
+    private int PlayID;
     private void Start()
     {
         HeroList = new List<GameObject>();
@@ -33,33 +33,38 @@ public class HeroSelect : MonoBehaviour {
         {
             GameObject go = transform.GetChild(i).gameObject;
             HeroList.Add(go);
-
-        
         }
     }
     // Update is called once per frame
     void Update () {
 
-        if (Input.GetKeyDown(UP))
-        {
 
-        }
-        else if (Input.GetKeyDown(Right))
+        if (!IsReady)
         {
-            NowHeroID++;
-        }
-        else if (Input.GetKeyDown(Left))
-        {
-            NowHeroID--;
-        }
-        else if (Input.GetKey(Select))
-        {
-            HeroList.RemoveAt(NowHeroID);
-            ListCount--;
+             if (Input.GetKeyDown(UP))
+                {
 
+                }
+                else if (Input.GetKeyDown(Right))
+                {
+                    NowHeroID++;
+                }
+                else if (Input.GetKeyDown(Left))
+                {
+                    NowHeroID--;
+                }
+                else if (Input.GetKey(Select))
+                {
+                    //HeroList.RemoveAt(NowHeroID);
+                    //ListCount--;
+                    GameSystem.Instance.PlayerSelect(PlayID, NowHeroID);
+                    IsReady = true;
+
+
+                }
+                 NowHeroID = (NowHeroID + ListCount) % ListCount;
+                SelectBoxRT.position = HeroList[NowHeroID].transform.position;
         }
-         NowHeroID = (NowHeroID + ListCount) % ListCount;
-        Debug.Log(NowHeroID);
-        SelectBoxRT.position = HeroList[NowHeroID].transform.position;
+        
     }
 }

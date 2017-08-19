@@ -14,11 +14,13 @@ public class UIManager : MonoBehaviour {
     private void Awake()
     {
         instance = this;
+        GameSystem.Instance.GameStart += BattleStart;
+
     }
 
     // Update is called once per frame
     void Update () {
-		
+
 	}
 
     public void Hurt(int PlayerID,float nowHP)
