@@ -33,6 +33,7 @@ public class GameSystem : MonoBehaviour {
         {
             case Satue.Begin:
                 GameTime = BattleTime;
+
                 GameSatue = Satue.Battle;
                 break;
             case Satue.Battle:
@@ -44,9 +45,9 @@ public class GameSystem : MonoBehaviour {
                 }
                 break;
             case Satue.End:
+
                 break;
-        }
-		
+        }	
 	}
 
     private void OnDestroy()
