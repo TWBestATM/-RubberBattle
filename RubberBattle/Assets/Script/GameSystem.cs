@@ -8,15 +8,18 @@ public class GameSystem : MonoBehaviour {
     /// </summary>
     [SerializeField]
     private float BattleTime =60;
-
+    [SerializeField]
+    TipUI m_TipUI;
     enum Satue {
         Begin,
         Battle,
-        End
+        End,
+        Idle
     }
     public  static GameSystem Instance;
     public float GameTime = 60;
     private Satue GameSatue;
+
     // Use this for initialization
     private void Awake()
     {
@@ -33,8 +36,8 @@ public class GameSystem : MonoBehaviour {
         {
             case Satue.Begin:
                 GameTime = BattleTime;
-
-                GameSatue = Satue.Battle;
+                m_TipUI.StartGame();
+                GameSatue = Satue.Idle;
                 break;
             case Satue.Battle:
                 //數字倒數
@@ -49,6 +52,11 @@ public class GameSystem : MonoBehaviour {
                 break;
         }	
 	}
+
+    public void StartBattle( )
+    {
+        GameSatue = Satue.Battle;
+    }
 
     private void OnDestroy()
     {
