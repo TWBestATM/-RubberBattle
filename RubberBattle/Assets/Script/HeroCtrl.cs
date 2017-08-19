@@ -24,6 +24,11 @@ public class HeroCtrl : MonoBehaviour {
     private KeyCode Right = KeyCode.RightArrow;
     [SerializeField]
     private KeyCode Attack = KeyCode.Space;
+    /// <summary>
+    /// 要改動態
+    /// </summary>
+    [SerializeField]
+    private HPUI hpUI;
     private Rigidbody2D rb;
     /// <summary>
     /// 是否站在地上
@@ -80,5 +85,10 @@ public class HeroCtrl : MonoBehaviour {
 
     private void RecoverIdle() {
         spineState.AnimationName = "idle";
+    }
+
+    public void Hurt() {
+        hpUI.UpdateHPUI(Hp / 10);
+        Hp--;
     }
 }
