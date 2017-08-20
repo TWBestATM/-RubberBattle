@@ -65,6 +65,7 @@ public class GameSystem : MonoBehaviour {
                 if (Input.anyKeyDown)
                 {
                     GameSatue = Satue.Select;
+                    GameStart();
                 }
                 break;
             case Satue.Begin:
@@ -86,7 +87,10 @@ public class GameSystem : MonoBehaviour {
         }	
 	}
 
-
+    public void OpeningEnd()
+    {
+        GameSatue = Satue.Opening;
+    }
     public void StartBattle()
     {
         GameSatue = Satue.Battle;

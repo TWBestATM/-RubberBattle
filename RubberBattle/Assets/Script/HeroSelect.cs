@@ -23,6 +23,8 @@ public class HeroSelect : MonoBehaviour
     private Transform SelectBoxRT;
     [SerializeField]
     private Text HeroName;
+    [SerializeField]
+    private Image HeroImage;
     private int NowHeroID = 0;
     private List<GameObject> HeroList;
     private int ListCount = 0;
@@ -70,6 +72,7 @@ public class HeroSelect : MonoBehaviour
             }
             NowHeroID = (NowHeroID + ListCount) % ListCount;
             SelectBoxRT.position = HeroList[NowHeroID].transform.position;
+            HeroImage.sprite = HeroDataList[NowHeroID].Sprite;
             HeroName.text = HeroDataList[NowHeroID].HeroName;
         }
 

@@ -69,7 +69,7 @@ public class HeroCtrl : MonoBehaviour {
             UP = KeyCode.UpArrow;
             Left = KeyCode.LeftArrow;
             Right = KeyCode.RightArrow;
-            Attack = KeyCode.Keypad2;
+            Attack = KeyCode.Alpha0;
         }
         
     }

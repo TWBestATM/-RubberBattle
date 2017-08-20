@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeroName: Hu2
   ID: 3
-  Perfeb: {fileID: 0}
+  Sprite: {fileID: 21300006, guid: 7f68161bd05084c41be1dfd7a33c65a4, type: 3}
   Head: {fileID: 21300006, guid: a899bd429b46d444f9a25215274107ed, type: 3}
