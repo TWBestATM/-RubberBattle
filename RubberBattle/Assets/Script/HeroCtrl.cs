@@ -93,6 +93,7 @@ public class HeroCtrl : MonoBehaviour {
         }
         if (Input.GetKeyDown(Attack))
         {
+
             spineState.AnimationName = "attack";
             Invoke("RecoverIdle", AttackTime);
 
@@ -110,7 +111,7 @@ public class HeroCtrl : MonoBehaviour {
       
 
         if (Hp <= 0) {
-            Debug.Log("Player"+(id+1) + "Dead");
+            Debug.Log(id + "Dead");
             GameSystem.Instance.GameOver(id);
 
         }
