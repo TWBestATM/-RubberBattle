@@ -630,7 +630,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.32, y: -0.27}
   serializedVersion: 2
-  m_Radius: 1.52
+  m_Radius: 1.72
 --- !u!61 &61283072931954000
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -727,7 +727,7 @@ MonoBehaviour:
   id: 0
   Speed: 5
   Jump: 300
-  Hp: 10
+  MaxHp: 10
   AttackTime: 1
   UP: 273
   Left: 276
