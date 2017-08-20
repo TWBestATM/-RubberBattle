@@ -703,7 +703,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: b6e5137ae9cc9aa4ab5ec68dfa5d7e40, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1402,7 +1402,7 @@ MonoBehaviour:
   Left: 276
   Right: 275
   Down: 274
-  Select: 258
+  Select: 48
   SelectBoxRT: {fileID: 1954652789}
   HeroName: {fileID: 282493774}
   PlayID: 1

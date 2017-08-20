@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 111188413904358252}
   - component: {fileID: 320365187402142580}
   m_Layer: 8
-  m_Name: GameObject
+  m_Name: hurtEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

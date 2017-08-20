@@ -628,9 +628,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.58, y: 0.21}
+  m_Offset: {x: -0.58, y: 0.09}
   serializedVersion: 2
-  m_Radius: 1.6
+  m_Radius: 2.05
 --- !u!61 &61478891504770518
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -972,7 +972,7 @@ MonoBehaviour:
   id: 0
   Speed: 5
   Jump: 300
-  Hp: 10
+  MaxHp: 10
   AttackTime: 1
   UP: 273
   Left: 276
