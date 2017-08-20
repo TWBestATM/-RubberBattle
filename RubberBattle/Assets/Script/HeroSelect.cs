@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HeroSelect : MonoBehaviour {
 
@@ -25,6 +26,8 @@ public class HeroSelect : MonoBehaviour {
     private bool IsReady=false;
     [SerializeField]
     private int PlayID;
+    [SerializeField]
+    private List<HeroData> HeroDataList;
     private void Start()
     {
         HeroList = new List<GameObject>();
@@ -32,13 +35,12 @@ public class HeroSelect : MonoBehaviour {
         for (int i = 0; i < ListCount; i++)
         {
             GameObject go = transform.GetChild(i).gameObject;
+            go.GetComponent<Image>().sprite = HeroDataList[i].Head;
             HeroList.Add(go);
         }
     }
     // Update is called once per frame
     void Update () {
-
-
         if (!IsReady)
         {
              if (Input.GetKeyDown(UP))
