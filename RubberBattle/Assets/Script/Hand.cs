@@ -6,9 +6,11 @@ public class Hand : MonoBehaviour {
     [SerializeField]
     GameObject parent;
     [SerializeField]
-    GameObject hurtEffect;
+    ObjectPool m_ObjectPool;
+
 	// Use this for initialization
 	void Start () {
+        m_ObjectPool = GameObject.FindGameObjectWithTag("Pool").GetComponent<ObjectPool>();
 	}
 	
 	// Update is called once per frame
@@ -17,10 +19,10 @@ public class Hand : MonoBehaviour {
 	}
 
     private void OnTriggerEnter2D(Collider2D collision) {
+        
         if (collision.tag == "body" && collision.gameObject != parent) {
             collision.gameObject.GetComponent<HeroCtrl>().Hurt();
-            GameObject effect = Instantiate(hurtEffect, collision.transform);
-
+            m_ObjectPool.ReUse(this.transform.position);
         }
     }
 }
