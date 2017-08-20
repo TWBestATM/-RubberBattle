@@ -745,6 +745,7 @@ MonoBehaviour:
   Right: 275
   Attack: 32
   Down: 274
+  Attack2: 122
   hpUI: {fileID: 0}
 --- !u!114 &114120745935539586
 MonoBehaviour:

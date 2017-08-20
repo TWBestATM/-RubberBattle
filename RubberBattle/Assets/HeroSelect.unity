@@ -1707,7 +1707,7 @@ MonoBehaviour:
   Left: 276
   Right: 275
   Down: 274
-  Select: 48
+  Select: 112
   SelectBoxRT: {fileID: 1954652789}
   HeroName: {fileID: 282493774}
   HeroImage: {fileID: 431283396}

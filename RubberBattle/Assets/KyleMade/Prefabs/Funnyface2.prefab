@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 114938476148901488}
   m_Layer: 0
   m_Name: Funnyface2
-  m_TagString: Untagged
+  m_TagString: body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -877,6 +877,8 @@ MonoBehaviour:
   Left: 276
   Right: 275
   Attack: 32
+  Attack2: 122
+  Down: 274
   hpUI: {fileID: 0}
 --- !u!114 &114507872537484170
 MonoBehaviour:
@@ -1023,6 +1025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 1512688382767808}
+  m_ObjectPool: {fileID: 0}
 --- !u!114 &114938476148901488
 MonoBehaviour:
   m_ObjectHideFlags: 1

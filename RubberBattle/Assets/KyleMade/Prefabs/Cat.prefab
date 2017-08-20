@@ -299,6 +299,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4302510921895114}
   - component: {fileID: 114641189700812970}
+  - component: {fileID: 58784911123933742}
+  - component: {fileID: 114673893224781262}
   m_Layer: 0
   m_Name: handright5
   m_TagString: Untagged
@@ -631,6 +633,21 @@ CircleCollider2D:
   m_Offset: {x: -0.58, y: 0.09}
   serializedVersion: 2
   m_Radius: 2.05
+--- !u!58 &58784911123933742
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1929108041381958}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.22, y: 0.14}
+  serializedVersion: 2
+  m_Radius: 1.92
 --- !u!61 &61478891504770518
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -939,6 +956,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 1037706839646728}
+  m_ObjectPool: {fileID: 0}
+--- !u!114 &114673893224781262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1929108041381958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6059eb37d31b094ea9ec5f88136652f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 1037706839646728}
+  m_ObjectPool: {fileID: 0}
 --- !u!114 &114713577044511998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -978,6 +1009,8 @@ MonoBehaviour:
   Left: 276
   Right: 275
   Attack: 32
+  Down: 274
+  Attack2: 122
   hpUI: {fileID: 0}
 --- !u!114 &114845537413111798
 MonoBehaviour:

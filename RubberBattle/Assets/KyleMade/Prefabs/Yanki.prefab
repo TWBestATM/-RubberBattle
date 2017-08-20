@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 114537269695226420}
   m_Layer: 0
   m_Name: Yanki
-  m_TagString: Untagged
+  m_TagString: body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -687,6 +687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 1240057882063160}
+  m_ObjectPool: {fileID: 0}
 --- !u!114 &114121676027170320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -853,6 +854,8 @@ MonoBehaviour:
   Left: 276
   Right: 275
   Attack: 32
+  Down: 274
+  Attack2: 122
   hpUI: {fileID: 0}
 --- !u!114 &114665807980610212
 MonoBehaviour:

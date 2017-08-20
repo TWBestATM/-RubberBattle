@@ -36,6 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4405097979507744}
   - component: {fileID: 114086351109137438}
+  - component: {fileID: 58002878019947080}
   m_Layer: 0
   m_Name: handright5
   m_TagString: Untagged
@@ -467,7 +468,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1511385250625498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.99648, y: -7.681257, z: 0}
+  m_LocalPosition: {x: 3.86, y: 1.19, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children:
   - {fileID: 4233059082183700}
@@ -616,6 +617,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &58002878019947080
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1066391991951554}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.35, y: 0.58}
+  serializedVersion: 2
+  m_Radius: 1.74
 --- !u!58 &58163946403187256
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -947,6 +963,8 @@ MonoBehaviour:
   Left: 276
   Right: 275
   Attack: 32
+  Down: 274
+  Attack2: 122
   hpUI: {fileID: 0}
 --- !u!114 &114772322148626416
 MonoBehaviour:
@@ -1036,3 +1054,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 1511385250625498}
+  m_ObjectPool: {fileID: 0}

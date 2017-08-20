@@ -733,6 +733,8 @@ MonoBehaviour:
   Left: 276
   Right: 275
   Attack: 32
+  Down: 274
+  Attack2: 122
   hpUI: {fileID: 0}
 --- !u!114 &114326591756642748
 MonoBehaviour:
@@ -1017,6 +1019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 1784012326887864}
+  m_ObjectPool: {fileID: 0}
 --- !u!114 &114975811707131316
 MonoBehaviour:
   m_ObjectHideFlags: 1
