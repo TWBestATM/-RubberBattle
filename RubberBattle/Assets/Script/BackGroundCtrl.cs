@@ -29,9 +29,12 @@ public class BackGroundCtrl : MonoBehaviour {
 
 
     }
-
-	// Update is called once per frame
-	void Update () {
+    private void OnDestroy()
+    {
+        GameSystem.Instance.GameStart -= StartGame;
+    }
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }
