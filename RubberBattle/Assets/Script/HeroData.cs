@@ -6,6 +6,6 @@ public class HeroData: ScriptableObject
 {
     public string HeroName;
     public int ID;
-    public GameObject Perfeb;
+    public Sprite Sprite;
     public Sprite Head;
 }

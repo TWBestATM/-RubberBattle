@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99713fcca44a9f14db1c227150a5a217, type: 3}
   m_Name: Hero5
   m_EditorClassIdentifier: 
-  HeroName: Blue
+  HeroName: James
   ID: 4
-  Perfeb: {fileID: 0}
+  Sprite: {fileID: 21300004, guid: 7f68161bd05084c41be1dfd7a33c65a4, type: 3}
   Head: {fileID: 21300004, guid: a899bd429b46d444f9a25215274107ed, type: 3}
