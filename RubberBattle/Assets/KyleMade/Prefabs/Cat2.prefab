@@ -741,7 +741,7 @@ MonoBehaviour:
   logErrors: 0
   disableRenderingOnOverride: 1
   _animationName: idle
-  loop: 0
+  loop: 1
   timeScale: 1
 --- !u!114 &114204361754479638
 MonoBehaviour:
@@ -871,7 +871,7 @@ MonoBehaviour:
   id: 0
   Speed: 5
   Jump: 300
-  Hp: 10
+  MaxHp: 10
   AttackTime: 1
   UP: 273
   Left: 276
