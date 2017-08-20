@@ -1,0 +1,27 @@
+
+skeleton.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+CharactorHead-sport
+  rotate: true
+  xy: 2, 2
+  size: 120, 160
+  orig: 120, 160
+  offset: 0, 0
+  index: -1
+Charactorarm-sport
+  rotate: true
+  xy: 164, 49
+  size: 73, 154
+  orig: 73, 154
+  offset: 0, 0
+  index: -1
+Charactorbody-sport
+  rotate: true
+  xy: 320, 38
+  size: 84, 116
+  orig: 84, 116
+  offset: 0, 0
+  index: -1

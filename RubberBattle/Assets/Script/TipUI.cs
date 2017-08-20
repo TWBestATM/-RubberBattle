@@ -4,28 +4,35 @@ using UnityEngine;
 using UnityEngine.UI;
 public class TipUI : MonoBehaviour {
     Text TipText;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start() {
         TipText = GetComponent<Text>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    }
+
+    // Update is called once per frame
+    void Update() {
+
+    }
 
     public void StartGame()
     {
 
         TipText.text = "";
-        StartCoroutine(Startamin());
+        StartCoroutine(StartAmin());
     }
+    public void EndGame(int WinID)
+    {
+
+        TipText.text = "";
+        StartCoroutine(EndAmin(WinID));
+    }
+
 
     /// <summary>
     /// 作技能倒數
     /// </summary>
     /// <returns></returns>
-    IEnumerator Startamin()
+    IEnumerator StartAmin()
     {
 
         TipText.text ="3";
@@ -40,4 +47,24 @@ public class TipUI : MonoBehaviour {
         GameSystem.Instance.StartBattle();
 
     }
+
+/// <summary>
+/// 秀勝利畫面
+/// </summary>
+/// <returns></returns>
+IEnumerator EndAmin(int ID)
+{
+        if (ID == 0)
+        {
+            TipText.text = "Player1\nWin !";
+        }
+        else
+        {
+            TipText.text = "Player2\nWin !";
+        }
+
+    yield return new WaitForSeconds(4);
+   
+
+}
 }
