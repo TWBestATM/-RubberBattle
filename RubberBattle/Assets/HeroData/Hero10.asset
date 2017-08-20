@@ -14,4 +14,4 @@ MonoBehaviour:
   HeroName: I Don't Know
   ID: 0
   Sprite: {fileID: 21300018, guid: 7f68161bd05084c41be1dfd7a33c65a4, type: 3}
-  Head: {fileID: 21300018, guid: 7f68161bd05084c41be1dfd7a33c65a4, type: 3}
+  Head: {fileID: 21300022, guid: a899bd429b46d444f9a25215274107ed, type: 3}

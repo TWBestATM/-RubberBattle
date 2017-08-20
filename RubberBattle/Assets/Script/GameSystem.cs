@@ -11,6 +11,7 @@ public class GameSystem : MonoBehaviour {
     [SerializeField]
     private float BattleTime =60;
     [SerializeField]
+    private AudioClip[] Music = new AudioClip[3];
     enum Satue {
         Opening,
         Select,
@@ -65,6 +66,8 @@ public class GameSystem : MonoBehaviour {
                 if (Input.anyKeyDown)
                 {
                     GameSatue = Satue.Select;
+                    GetComponent<AudioSource>().clip = Music[1];
+                    GetComponent<AudioSource>().Play();
                     GameStart();
                 }
                 break;
@@ -73,6 +76,8 @@ public class GameSystem : MonoBehaviour {
                 {
                     GameTime = BattleTime;
                     GameSatue = Satue.Idle;
+                    GetComponent<AudioSource>().clip = Music[2];
+                    GetComponent<AudioSource>().Play();
                     BattleStart();
                 }
                 break;
@@ -124,6 +129,8 @@ public class GameSystem : MonoBehaviour {
     public void ReStart()
     {
         GameSatue = Satue.Idle;
+        GetComponent<AudioSource>().clip = Music[0];
+        GetComponent<AudioSource>().Play();
         Init();
         SceneManager.LoadScene("HeroSelect");
 
