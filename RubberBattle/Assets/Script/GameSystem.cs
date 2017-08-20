@@ -24,7 +24,9 @@ public class GameSystem : MonoBehaviour {
     private Satue GameSatue;
     // Use this for initialization
     public delegate void SystemDelegate();
+    public delegate void SystemDelegateInt(int PlayID);
     public   event SystemDelegate GameStart ;
+    public event SystemDelegateInt GameEnd;
 
 
     private void Awake()
@@ -79,8 +81,9 @@ public class GameSystem : MonoBehaviour {
     {
         GameSatue = Satue.Battle;
     }
-    public void GameOver()
+    public void GameOver(int PlayerID)
     {
+        GameEnd(PlayerID==0?1:0);
         GameSatue = Satue.End;
 
     }

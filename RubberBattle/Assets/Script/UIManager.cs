@@ -9,9 +9,13 @@ public class UIManager : MonoBehaviour {
     [SerializeField]
     private Image Player1Head;
     [SerializeField]
+    private Text Player1Name;
+    [SerializeField]
     private HPUI Player2HP;
     [SerializeField]
     private Image Player2Head;
+    [SerializeField]
+    private Text Player2Name;
     [SerializeField]
     private TipUI m_TipUI;
     [SerializeField]
@@ -25,14 +29,18 @@ public class UIManager : MonoBehaviour {
         m_GameSystem = GameSystem.Instance;
         Init();
         m_GameSystem.GameStart += BattleStart;
+        m_GameSystem.GameEnd += BattleEnd;
 
     }
     public void Init()
     {
-        Debug.Log(m_GameSystem.GetHeroID(0));
+
         Player1Head.sprite = HeroDataList[m_GameSystem.GetHeroID(0)].Head;
-        Debug.Log(m_GameSystem.GetHeroID(1));
+        Player1Name.text= HeroDataList[m_GameSystem.GetHeroID(0)].HeroName;
+
+
         Player2Head.sprite = HeroDataList[m_GameSystem.GetHeroID(1)].Head;
+        Player2Name.text = HeroDataList[m_GameSystem.GetHeroID(1)].HeroName;
     }
     // Update is called once per frame
     void Update () {
@@ -51,7 +59,11 @@ public class UIManager : MonoBehaviour {
     {
         m_TipUI.StartGame();
     }
+    public void BattleEnd(int WinID)
+    {
+        m_TipUI.EndGame(WinID);
 
+    }
     private void OnDestroy()
     {
         instance = null;

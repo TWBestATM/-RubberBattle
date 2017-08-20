@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HeroSelect : MonoBehaviour {
+public class HeroSelect : MonoBehaviour
+{
 
     [SerializeField]
     private KeyCode UP = KeyCode.UpArrow;
@@ -14,16 +15,18 @@ public class HeroSelect : MonoBehaviour {
     [SerializeField]
     private KeyCode Down = KeyCode.DownArrow;
     [SerializeField]
-    private KeyCode Select= KeyCode.Space;
+    private KeyCode Select = KeyCode.Space;
     /// <summary>
     /// 選擇的那個框
     /// </summary>
     [SerializeField]
     private Transform SelectBoxRT;
-    private int NowHeroID=0;
+    [SerializeField]
+    private Text HeroName;
+    private int NowHeroID = 0;
     private List<GameObject> HeroList;
-    private int ListCount=0;
-    private bool IsReady=false;
+    private int ListCount = 0;
+    private bool IsReady = false;
     [SerializeField]
     private int PlayID;
     [SerializeField]
@@ -40,33 +43,35 @@ public class HeroSelect : MonoBehaviour {
         }
     }
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
         if (!IsReady)
         {
-             if (Input.GetKeyDown(UP))
-                {
+            if (Input.GetKeyDown(UP))
+            {
 
-                }
-                else if (Input.GetKeyDown(Right))
-                {
-                    NowHeroID++;
-                }
-                else if (Input.GetKeyDown(Left))
-                {
-                    NowHeroID--;
-                }
-                else if (Input.GetKey(Select))
-                {
-                    //HeroList.RemoveAt(NowHeroID);
-                    //ListCount--;
-                    GameSystem.Instance.PlayerSelect(PlayID, NowHeroID);
-                    IsReady = true;
+            }
+            else if (Input.GetKeyDown(Right))
+            {
+                NowHeroID++;
+            }
+            else if (Input.GetKeyDown(Left))
+            {
+                NowHeroID--;
+            }
+            else if (Input.GetKey(Select))
+            {
+                //HeroList.RemoveAt(NowHeroID);
+                //ListCount--;
+                GameSystem.Instance.PlayerSelect(PlayID, NowHeroID);
+                IsReady = true;
 
 
-                }
-                 NowHeroID = (NowHeroID + ListCount) % ListCount;
-                SelectBoxRT.position = HeroList[NowHeroID].transform.position;
+            }
+            NowHeroID = (NowHeroID + ListCount) % ListCount;
+            SelectBoxRT.position = HeroList[NowHeroID].transform.position;
+            HeroName.text = HeroDataList[NowHeroID].HeroName;
         }
-        
+
     }
 }

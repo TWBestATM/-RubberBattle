@@ -12,8 +12,9 @@ public class HeroCtrl : MonoBehaviour {
     private float Speed=0;
     [SerializeField]
     private float Jump = 10;
-    [SerializeField]
     private float Hp=10;
+    [SerializeField]
+    private float MaxHp = 10;
     [SerializeField]
     private float AttackTime = 1.0f;
     [SerializeField]
@@ -57,6 +58,7 @@ public class HeroCtrl : MonoBehaviour {
     public void Init(int PlayID) 
     {
         id = PlayID;
+        Hp = MaxHp;
         if (PlayID == 0) {
             UP = KeyCode.W;
             Left = KeyCode.A;
@@ -105,11 +107,13 @@ public class HeroCtrl : MonoBehaviour {
     public void Hurt() {
 
         Hp--;
-        UIManager.instance.Hurt(id, Hp/10);
+        UIManager.instance.Hurt(id, Hp/MaxHp);
       
 
-        if (Hp == 0) {
-            GameSystem.Instance.GameOver();
+        if (Hp <= 0) {
+            Debug.Log(id + "Dead");
+            GameSystem.Instance.GameOver(id);
+
         }
     }
 }
