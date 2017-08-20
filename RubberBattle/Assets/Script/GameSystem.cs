@@ -12,6 +12,7 @@ public class GameSystem : MonoBehaviour {
     private float BattleTime =60;
     [SerializeField]
     enum Satue {
+        Opening,
         Select,
         Begin,
         Battle,
@@ -25,9 +26,9 @@ public class GameSystem : MonoBehaviour {
     // Use this for initialization
     public delegate void SystemDelegate();
     public delegate void SystemDelegateInt(int PlayID);
-    public   event SystemDelegate GameStart ;
+    public   event SystemDelegate BattleStart ;
+    public event SystemDelegate GameStart;
     public event SystemDelegateInt GameEnd;
-
 
     private void Awake()
     {
@@ -44,23 +45,34 @@ public class GameSystem : MonoBehaviour {
 
     }
     void Start () {
+        Init();
+	}
+    private void Init()
+    {
         m_PlayerData[0] = new PlayerData();
         m_PlayerData[0].Ready = false;
         m_PlayerData[1] = new PlayerData();
         m_PlayerData[1].Ready = false;
         GameSatue = Satue.Idle;
-	}
-	
+
+
+    }
 	// Update is called once per frame
 	void Update () {
         switch (GameSatue)
         {
+            case Satue.Opening:
+                if (Input.anyKeyDown)
+                {
+                    GameSatue = Satue.Select;
+                }
+                break;
             case Satue.Begin:
-                if (GameStart != null)
+                if (BattleStart != null)
                 {
                     GameTime = BattleTime;
                     GameSatue = Satue.Idle;
-                    GameStart();
+                    BattleStart();
                 }
                 break;
             case Satue.Battle:
@@ -68,10 +80,8 @@ public class GameSystem : MonoBehaviour {
                 GameTime -= Time.deltaTime;
                 if (GameTime <= 0)
                 {
-                    GameSatue =Satue.End;
+                    GameOver(0);
                 }
-                break;
-            case Satue.End:
                 break;
         }	
 	}
@@ -81,6 +91,7 @@ public class GameSystem : MonoBehaviour {
     {
         GameSatue = Satue.Battle;
     }
+
     public void GameOver(int PlayerID)
     {
         GameEnd(PlayerID==0?1:0);
@@ -106,7 +117,13 @@ public class GameSystem : MonoBehaviour {
             GameSatue = Satue.Begin;
         }
     }
+    public void ReStart()
+    {
+        GameSatue = Satue.Idle;
+        Init();
+        SceneManager.LoadScene("HeroSelect");
 
+    }
     private void OnDestroy()
     {
        // Instance = null;

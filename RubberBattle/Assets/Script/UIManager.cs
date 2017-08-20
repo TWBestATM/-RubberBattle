@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour {
         instance = this;
         m_GameSystem = GameSystem.Instance;
         Init();
-        m_GameSystem.GameStart += BattleStart;
+        m_GameSystem.BattleStart += BattleStart;
         m_GameSystem.GameEnd += BattleEnd;
 
     }
@@ -67,5 +67,8 @@ public class UIManager : MonoBehaviour {
     private void OnDestroy()
     {
         instance = null;
+        m_GameSystem.BattleStart -= BattleStart;
+        m_GameSystem.GameEnd -= BattleEnd;
+
     }
 }
