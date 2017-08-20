@@ -5,9 +5,12 @@ using UnityEngine;
 public class Hand : MonoBehaviour {
     [SerializeField]
     GameObject parent;
+    [SerializeField]
+    ObjectPool m_ObjectPool;
 
 	// Use this for initialization
 	void Start () {
+        m_ObjectPool = GameObject.FindGameObjectWithTag("Pool").GetComponent<ObjectPool>();
 	}
 	
 	// Update is called once per frame
@@ -19,6 +22,7 @@ public class Hand : MonoBehaviour {
         
         if (collision.tag == "body" && collision.gameObject != parent) {
             collision.gameObject.GetComponent<HeroCtrl>().Hurt();
+            m_ObjectPool.ReUse(this.transform.position);
         }
     }
 }

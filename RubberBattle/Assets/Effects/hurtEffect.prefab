@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4454766949702074}
   - component: {fileID: 95532248740610222}
   - component: {fileID: 111188413904358252}
-  - component: {fileID: 320365187402142580}
+  - component: {fileID: 114235574314101460}
   m_Layer: 8
   m_Name: hurtEffect
   m_TagString: Untagged
@@ -164,6 +164,17 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &114235574314101460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1491156495987090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7786a57fbfc3a6d469dafcfcc5dcbd60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198988804960492472
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -3567,21 +3578,3 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!320 &320365187402142580
-PlayableDirector:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1491156495987090}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 0}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 0}
-    value: {fileID: 1491156495987090}
-  m_ExposedReferences:
-    m_References: []
