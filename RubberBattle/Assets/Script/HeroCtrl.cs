@@ -26,9 +26,9 @@ public class HeroCtrl : MonoBehaviour {
     [SerializeField]
     private KeyCode Attack = KeyCode.Space;
     [SerializeField]
-    private KeyCode Down = KeyCode.DownArrow;
-    [SerializeField]
     private KeyCode Attack2 = KeyCode.Z;
+    [SerializeField]
+    private KeyCode Down = KeyCode.DownArrow;
     /// <summary>
     /// 要改動態
     /// </summary>
@@ -69,13 +69,15 @@ public class HeroCtrl : MonoBehaviour {
             Right = KeyCode.D;
             Attack = KeyCode.G;
             Down = KeyCode.S;
+            Attack2 = KeyCode.F;
         }
         else {
             UP = KeyCode.UpArrow;
             Left = KeyCode.LeftArrow;
             Right = KeyCode.RightArrow;
-            Attack = KeyCode.Alpha0;
+            Attack = KeyCode.P;
             Down = KeyCode.DownArrow;
+            Attack2 = KeyCode.O;
         }
         
     }
