@@ -1,0 +1,27 @@
+
+skeleton.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dragon/CharactorHead-Dragon
+  rotate: false
+  xy: 2, 128
+  size: 192, 126
+  orig: 192, 126
+  offset: 0, 0
+  index: -1
+dragon/Charactorarm-Dragon
+  rotate: true
+  xy: 196, 194
+  size: 60, 138
+  orig: 60, 138
+  offset: 0, 0
+  index: -1
+dragon/Charactorbody-Dragon
+  rotate: true
+  xy: 2, 2
+  size: 124, 116
+  orig: 124, 116
+  offset: 0, 0
+  index: -1
