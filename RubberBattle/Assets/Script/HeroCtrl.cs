@@ -27,6 +27,8 @@ public class HeroCtrl : MonoBehaviour {
     private KeyCode Attack = KeyCode.Space;
     [SerializeField]
     private KeyCode Down = KeyCode.DownArrow;
+    [SerializeField]
+    private KeyCode Attack2 = KeyCode.Z;
     /// <summary>
     /// 要改動態
     /// </summary>
@@ -98,6 +100,12 @@ public class HeroCtrl : MonoBehaviour {
         if (Input.GetKeyDown(Attack))
         {
             spineState.AnimationName = "attack";
+            Invoke("RecoverIdle", AttackTime);
+
+        }
+
+        if (Input.GetKeyDown(Attack2)) {
+            spineState.AnimationName = "attack2";
             Invoke("RecoverIdle", AttackTime);
 
         }

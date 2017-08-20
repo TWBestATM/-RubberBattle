@@ -765,7 +765,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &58090367104226514
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -1030,6 +1030,7 @@ MonoBehaviour:
   Right: 275
   Attack: 32
   Down: 274
+  Attack2: 122
   hpUI: {fileID: 0}
 --- !u!114 &114367095273836642
 MonoBehaviour:
