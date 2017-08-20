@@ -21,6 +21,7 @@ public class Hand : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         
         if (collision.tag == "body" && collision.gameObject != parent) {
+            print("hit");
             collision.gameObject.GetComponent<HeroCtrl>().Hurt();
             m_ObjectPool.ReUse(this.transform.position);
         }
