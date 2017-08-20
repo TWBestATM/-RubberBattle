@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: f9e276ab86539144e807d990c6a0933c
-timeCreated: 1503191831
-licenseType: Free
+timeCreated: 1503194511
+licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
     21300000: "\u5C01\u9762_\u6587\u5B57_2"
@@ -10,6 +10,7 @@ TextureImporter:
     21300006: "\u5C01\u9762_\u6587\u5B57_10"
     21300008: "\u5C01\u9762_\u6587\u5B57_12"
     21300010: "\u5C01\u9762_\u6587\u5B57_15"
+    21300012: "\u5C01\u9762_\u6587\u5B57_0"
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -97,7 +98,7 @@ TextureImporter:
         width: 449
         height: 149
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -111,49 +112,7 @@ TextureImporter:
         width: 872
         height: 872
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "\u5C01\u9762_\u6587\u5B57_8"
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 726
-        width: 553
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "\u5C01\u9762_\u6587\u5B57_10"
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 599
-        width: 502
-        height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: "\u5C01\u9762_\u6587\u5B57_12"
-      rect:
-        serializedVersion: 2
-        x: 115
-        y: 311
-        width: 426
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,7 +126,21 @@ TextureImporter:
         width: 595
         height: 137
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "\u5C01\u9762_\u6587\u5B57_0"
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 317
+        width: 549
+        height: 527
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
