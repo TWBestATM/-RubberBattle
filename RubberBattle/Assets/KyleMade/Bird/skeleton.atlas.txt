@@ -1,0 +1,97 @@
+
+skeleton.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+CharactorFeather1-bird
+  rotate: false
+  xy: 2, 5
+  size: 52, 32
+  orig: 52, 32
+  offset: 0, 0
+  index: -1
+CharactorFeather2-bird
+  rotate: false
+  xy: 320, 79
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+CharactorFeather3-bird
+  rotate: true
+  xy: 56, 14
+  size: 23, 53
+  orig: 23, 53
+  offset: 0, 0
+  index: -1
+CharactorFeather4-bird
+  rotate: true
+  xy: 425, 103
+  size: 23, 57
+  orig: 23, 57
+  offset: 0, 0
+  index: -1
+CharactorFeather5-bird
+  rotate: true
+  xy: 369, 87
+  size: 39, 54
+  orig: 39, 54
+  offset: 0, 0
+  index: -1
+CharactorFeather6-bird
+  rotate: false
+  xy: 196, 2
+  size: 55, 48
+  orig: 55, 48
+  offset: 0, 0
+  index: -1
+CharactorHead-bird
+  rotate: false
+  xy: 2, 39
+  size: 95, 87
+  orig: 95, 87
+  offset: 0, 0
+  index: -1
+CharactorHead-bird (2)
+  rotate: false
+  xy: 99, 39
+  size: 95, 87
+  orig: 95, 87
+  offset: 0, 0
+  index: -1
+CharactorTongue-bird
+  rotate: true
+  xy: 253, 19
+  size: 31, 17
+  orig: 31, 17
+  offset: 0, 0
+  index: -1
+Charactorarm-bird
+  rotate: false
+  xy: 196, 52
+  size: 81, 74
+  orig: 81, 74
+  offset: 0, 0
+  index: -1
+Charactorbody-bird
+  rotate: false
+  xy: 279, 64
+  size: 39, 62
+  orig: 39, 62
+  offset: 0, 0
+  index: -1
+CharactorlegL-bird
+  rotate: false
+  xy: 111, 14
+  size: 23, 23
+  orig: 23, 23
+  offset: 0, 0
+  index: -1
+CharactorlegR-bird
+  rotate: true
+  xy: 484, 109
+  size: 17, 26
+  orig: 17, 26
+  offset: 0, 0
+  index: -1
