@@ -63,7 +63,8 @@ IEnumerator EndAmin(int ID)
             TipText.text = "Player2\nWin !";
         }
 
-    yield return new WaitForSeconds(4);
+    yield return new WaitForSeconds(3);
+        GameSystem.Instance.ReStart();
    
 
 }
