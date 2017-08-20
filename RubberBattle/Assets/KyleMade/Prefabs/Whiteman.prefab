@@ -251,6 +251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4679054633144344}
   - component: {fileID: 114852070535426264}
+  - component: {fileID: 58650634461255800}
   m_Layer: 0
   m_Name: handright5
   m_TagString: Untagged
@@ -570,7 +571,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: cd47ddee7b9e8f04d92b6dbf13a4d322, type: 2}
+  - {fileID: 2100000, guid: 522e5f6152908b049ab19ec69b7bca2e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -622,6 +623,21 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1638733288416906}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.06, y: 0.15}
+  serializedVersion: 2
+  m_Radius: 0.96
+--- !u!58 &58650634461255800
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1797686051976036}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -705,7 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 23e68226ac58ece4c84056b794f9e9fe, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: c3aaae808edc8a547bc657da1f092d68, type: 2}
   initialSkinName: default
   initialFlipX: 0
   initialFlipY: 0
@@ -744,8 +760,8 @@ MonoBehaviour:
   Left: 276
   Right: 275
   Attack: 32
-  Down: 274
   Attack2: 122
+  Down: 274
   hpUI: {fileID: 0}
 --- !u!114 &114120745935539586
 MonoBehaviour:

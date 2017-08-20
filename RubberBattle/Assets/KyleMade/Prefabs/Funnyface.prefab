@@ -963,8 +963,8 @@ MonoBehaviour:
   Left: 276
   Right: 275
   Attack: 32
-  Down: 274
   Attack2: 122
+  Down: 274
   hpUI: {fileID: 0}
 --- !u!114 &114772322148626416
 MonoBehaviour:

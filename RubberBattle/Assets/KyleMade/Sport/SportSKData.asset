@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: WhitemanSkeletonData
+  m_Name: SportSKData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: a5c60934885efa6408a42a0500c5a7b4, type: 2}
+  - {fileID: 11400000, guid: 46252151612c1654d99a3799aacc6bfe, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: 8e6384d2f03cf5b43bb86edb85d37b85, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: ef3a2b6de4bfa7b41ab60e6984da233a, type: 3}
   fromAnimation: []
   toAnimation: []
   duration: []
